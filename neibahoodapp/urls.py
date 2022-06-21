@@ -1,5 +1,6 @@
 from django.urls import path, include
 from . import views
+from .views import *
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -15,4 +16,5 @@ urlpatterns = [
     path('<hood_id>/new-post', views.create_post, name='post'),
     path('<hood_id>/members', views.hood_members, name='members'),
     path('search/', views.search_business, name='search'),
+    path('logout/', SignOutView.as_view(), name='logout'),
 ]

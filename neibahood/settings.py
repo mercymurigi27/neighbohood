@@ -54,6 +54,7 @@ cloudinary.config(
 )
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'index'
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME':config('CD_NAME') ,
@@ -70,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'neibahood.urls'

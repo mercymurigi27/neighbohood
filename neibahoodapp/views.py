@@ -1,11 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SignupForm, BusinessForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from .models import NeighbourHood, Profile, Business, Post
 from .forms import UpdateProfileForm, NeighbourHoodForm, PostForm
 from django.contrib.auth.models import User
+from django.views.generic.edit import View 
 
 
 @login_required(login_url='login')
@@ -139,3 +140,8 @@ def search_business(request):
     else:
         message = "You haven't searched for any image category"
     return render(request, "results.html")
+
+class SignOutView(View):
+  def get(self,request):
+    logout(request)
+    return redirect('index')    
