@@ -24,7 +24,7 @@ To get the project .......
   
 ##### Cloning the repository:  
  ```bash 
-https://github.com/Owiti-Charles/HoodWatch.git
+https://github.com/mercymurigi27/neighbohood.git
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
@@ -60,7 +60,7 @@ Open the application on your browser `127.0.0.1:8000`.
  
 ## Technology used  
   
-* [Python3.6](https://www.python.org/)  
+* [Python3.8](https://www.python.org/)  
 * [Django 4.0.4](https://docs.djangoproject.com/en/4.4/)  
 * [Heroku](https://heroku.com)  
   
