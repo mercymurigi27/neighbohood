@@ -73,5 +73,5 @@ If you have any question or contributions, please email me at [mercymurigi41@gma
   
 ## License 
 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)]
 * Copyright (c) 2022 **Mercy Murigi**
