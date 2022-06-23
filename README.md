@@ -3,10 +3,10 @@
 >[mercy murigi](https://github.com/mercymurigi27/neighbohood.git)  
   
 # Description  
-Tis is a neighborhood app where a user must signup first, be able to join a hood owned by the hood admin, and once you 
+This is a neighborhood app where a user must signup first, be able to join a hood owned by the hood admin, and once you 
 join a hood, one can see businesses and posts in only that wood they belong to.  
 ##  Live Link  
- 
+ [https://neibas.herokuapp.com/]
   
 
 ## User Story  
@@ -73,5 +73,5 @@ If you have any question or contributions, please email me at [mercymurigi41@gma
   
 ## License 
 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)]
 * Copyright (c) 2022 **Mercy Murigi**
