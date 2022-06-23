@@ -1,19 +1,62 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark" style="height: 15pc; color: aquamarine;"> 
     <div class="container-fluid">
-        <button type="button" id="sidebarCollapse" class="btn btn-sm btn-info">
-            <i class="fas fa-align-left"></i>
-        </button>
-        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-align-justify"></i>
-        </button>
+        <div class="row">
+            <div class="col-6">
+                <!-- <h2 class="text-white mt-3 fw-bold">My<span class="color">Hood</span></h2> -->
+                <h3><a href="{% url 'index' %}" style="color: antiquewhite;">Neighbourhood Watch</a></h3>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+        
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: antiquewhite;">
             <ul class="nav navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <li class="nav-item active">
+                <!-- <li class="nav-item active" style="color: antiquewhite;">
                      <img class="rounded-circle nav-img"src="{{ user.profile.profile_picture.url }}" alt="">
                     &nbsp; <span class="text-white">{{user.username|title}}</span>
-                </li>
+                </li> -->
+
+                <ul class="list-unstyled components mr-2 ml-2" style="color: antiquewhite;">
+                    <li class="mb-4">
+                        <a href="{% url 'profile' user.username %}">
+                            <img class="rounded-circle nav-img"src="{{ user.profile.profile_picture.url }}" alt="">
+                            &nbsp; Profile
+                        </a>
+            
+                    </li>
+                    <li class="mb-4 ">
+                        <a href="{% url 'edit-profile' user.username %}">
+                            <i class="fas fa-edit"></i>&nbsp;
+                            &nbsp; Edit Profile
+                        </a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="{% url 'hood' %}">
+                            <i class="fas fa-home"></i>&nbsp;
+                            &nbsp;  Available Hoods
+                        </a>
+                    </li>
+            
+                    {% if user.profile.neighbourhood %}
+                    <li class="mb-4">
+                        <a href="{% url 'single-hood' user.profile.neighbourhood.id %}">
+                            <i class="fas fa-paper-plane"></i>&nbsp;
+                            &nbsp;{{user.profile.neighbourhood.name}}
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="mb-4">
+                        <a href=""> &nbsp;
+                            No Hood Yet
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <div class="logout ml-2 mr-2 ">
+                    <a href="{% url 'logout' %}" class="btn btn-sm btn-outline-danger d-block mx-auto"> Logout</a>
+                </div>
+                
                 {% else %}
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'login' %}">Log In</a>
